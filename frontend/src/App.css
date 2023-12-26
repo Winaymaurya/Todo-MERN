@@ -1,0 +1,81 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  /* box-sizing: border-box; */
+  background-color: rgb(194, 234, 184);
+}
+
+
+.mainBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.head{
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  color:black;
+  text-shadow: 2px 2px 10px white;
+  margin-bottom: 30px;
+}
+.add{
+
+  border-radius: 50px;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+}
+input{
+  padding: 5px 25px;
+  font-size: 24px;
+
+  border: none;
+}
+input:focus{
+  outline: none;
+}
+button{
+  font-size: 30px;
+  border-radius: 100px;
+  padding: 10px 20px;
+  background-color: rgb(121, 201, 240);
+  color: white;
+  transition: .3s;
+}
+button:hover{
+ background-color: rgb(74, 176, 240);
+ transform: rotate(20deg);
+}
+.task{
+  margin-top: 10px;
+  /* border: 1px solid black; */
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.ticked{
+  text-decoration: line-through;
+}
+
+h3{
+  margin-top: 30px;
+}
+
+.opt{
+  display: flex;
+  padding: 10px;
+}
+.delete{
+  cursor: pointer;
+  height: 30px;
+  margin-left: 10px;
+  width: 30px;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
