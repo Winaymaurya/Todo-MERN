@@ -3,7 +3,7 @@ import taskModel from "../models/taskModel.js";
 export const createTaskController = async (req, res) => {
     try {
         const { name } = req.body
-        console.log(req.body, "10848408")
+       
         if (!name) {
             return res.send({ message: "Task is required" })
         }
@@ -155,4 +155,28 @@ export const updateTaskController=async(req,res)=>{
             error
         })
     }
+}
+
+
+export const editTaskController=async (req,res)=>{
+     try {
+        const { id } = req.params
+        const {name}=req.body
+
+        const existingTask = await taskModel.findByIdAndUpdate(id,{name},{new:true})
+        if (existingTask) {
+            return res.status(200).send({
+                success: true,
+                message: "Task Updated",
+            })
+        }
+
+     } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success: false,
+            message: "Something went wrong",
+            error
+        })
+     }
 }

@@ -8,4 +8,4 @@ const taskSchema=mongoose.Schema({
     },
     isCompleted:{type:Boolean,default:false},
 },{timeStamp:true})
-export default mongoose.model('tasks',taskSchema)
+export default mongoose.model('tasks',taskSchema) 

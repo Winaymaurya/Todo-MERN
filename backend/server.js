@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors()) ;
 
 
-// Connecting Data base
+// Connecting DataBase
 const db= async()=>{
     try {
         await mongoose.connect(process.env.CLUSTER)
